@@ -1,40 +1,37 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 
-var Header = React.createClass({
+class Header extends Component {
     render() {
         return (
             <header id="header">
-                    <div className="header-top">
-                        <a className="logo" href="#"><img src="../../img/logo.png" alt="logo"/></a>
-                        <p className="right_logo">for athlets and coaches</p>
+                <div className="header_top">
+                    <div className="header_top_left">
+                        <a className="" href="#">delivery</a>
+                        <a className="" href="#">faq</a>
+                        <a className="" href="#">help</a>
                     </div>
-                    <div className="header-center row">
-                        <p className="p_left">BE RECRUITED</p>
-                        <p className="p_right">PLAY COLLEGE SPORTS</p>
-                    </div> <div className="header-center row">
-                        <p className="p_left">BE RECRUITED</p>
-                        <p className="p_left">BE RECRUITED</p>
-                        <p className="p_right">PLAY COLLEGE SPORTS</p>
+                    <div className="header_top_right">
+
                     </div>
-                    <div className="row">
-                        <ul className="nav">
-                            <li><a href="#">FOOTBALL</a></li>
-                            <li><a href="#">BASKETBALL</a></li>
-                            <li><a href="#">BASEBALL</a></li>
-                            <li><a href="#">SOCCER</a></li>
-                            <li><a href="#">ICE HOCKEY</a></li>
-                        </ul>
-                    </div>
-                    <div className="row buttons">
-                        <a href="#" className="button button_1"><img src="../../img/header/IconApple.png"
-                                                                     alt="apple"/><p>download on the <br/> app store</p></a>
-                        <a href="#" className="button button_2"><img src="../../img/header/IconGoogle-Play.png"
-                                                                     alt="google"/><p>get it on the <br/> google play</p></a>
-                    </div>
+                </div>
+                <hr/>
+                <nav>
+                    <a className="logo" href="#"><img src="../../img/logo.png" alt="logo"/></a>
+                    <ul className="nav">
+                        <li><a href="#">home</a></li>
+                        <li><a href="#">catalog</a></li>
+                        <li><a href="#">news</a></li>
+                        <li><a href="#">sale</a></li>
+                        <li><a href="#">about</a></li>
+                        <li><a href="#">contact</a></li>
+                    </ul>
+                </nav>
+                <hr/>
             </header>
 
         )
     }
-});
+}
+;
 
 export default Header;
