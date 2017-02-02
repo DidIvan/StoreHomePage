@@ -26,7 +26,6 @@ var Main = React.createClass({
                     <Goods image="../../img/content/Base6.jpg" price="$36" goodName="Basic swimsuit"/>
                     <Goods image="../../img/content/Base7.jpg" price="$12" goodName="Bleached shorts"/>
                     <Goods image="../../img/content/Base8.jpg" price="$32 $12" goodName="T-shirt with lower panel"/>
-                 <Subscribe/>
                 </main>
             </div>
         )
