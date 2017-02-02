@@ -1,11 +1,13 @@
 import React, {Component} from 'react';
+import '../../css/components-style/footer.css';
+import '../../css/components-style/style.css';
 
 class Footer extends Component {
     render() {
         return (
-            <footer id="footer">
+            <footer id="footer" className="container">
                 <a className="logo" href="#"><img src="../../img/logo.png" alt="logo"/></a>
-                <ul className="nav">
+                <ul className="footer_nav">
                     <li><a href="#">home</a></li>
                     <li><a href="#">catalog</a></li>
                     <li><a href="#">news</a></li>

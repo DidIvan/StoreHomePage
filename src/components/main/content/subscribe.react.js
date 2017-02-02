@@ -4,7 +4,7 @@ class Subscribe extends Component{
     render() {
         return (
             <div>
-                <section className="">
+                <section className="subscribe">
                     <p>subscribe</p>
                     <p>stay updated on news</p>
                     <input type="text" placeholder="your email address"/>
