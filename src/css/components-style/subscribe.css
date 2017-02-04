@@ -4,3 +4,50 @@
     height: 287px;
 }
 
+.subscribe_center {
+    margin: 0 auto;
+    height: inherit;
+    width: 380px;
+    padding-top: 70px;
+    text-align: center;
+}
+
+.subscribe_center h3 {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #48677a;
+}
+
+.subscribe_center p {
+    font-size: 38px;
+    color: #ffffff;
+    margin-top: 30px;
+}
+
+.subscribe_input {
+    display: inline-block;
+    width: 302px;
+    height: 50px;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 23px;
+    margin-top: 33px;
+}
+
+.subscribe_email{
+    font-size: 12px;
+    text-transform: uppercase;
+    display: inline-block;
+    float: left;
+    margin: 18px 0 0 25px;
+    color: rgba(255, 255, 255, .9);
+}
+
+.subscribe_pointer {
+    background: url('../../../public/img/content/pointer.png');
+    width: 6px;
+    height: 10px;
+    display: inline-block;
+    float: right;
+    margin: 18px 21px 0 0;
+}
+

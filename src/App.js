@@ -11,7 +11,7 @@ import './css/components-style/style.css';
 class App extends Component {
     render() {
         return (
-            <div className="">
+            <div>
                 <Header/>
                 <Main/>
                 <Subscribe/>
