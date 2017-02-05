@@ -5,21 +5,31 @@ import '../../css/components-style/style.css';
 class Header extends Component {
     render() {
         return (
-            <header id="header">
-                <div className="header_top container">
-                    <ul className="header_top_left">
-                        <li><a href="#">delivery</a></li>
-                        <li><a href="#">faq</a></li>
-                        <li><a href="#">help</a></li>
-                    </ul>
-                    <div className="header_top_right">
-
+            <header id="header" className="horizont">
+                <div className="horizont">
+                    <div className="header_top container">
+                        <ul className="header_top_left">
+                            <li><a href="#">delivery</a></li>
+                            <li><a href="#">faq</a></li>
+                            <li><a href="#">help</a></li>
+                        </ul>
+                        <div className="header_top_right">
+                            <ul className="currency">
+                                <li><a href="#">currency</a>
+                                    <ul>
+                                        <li><a href="#">dolars</a></li>
+                                        <li><a href="#">grivnas</a></li>
+                                        <li><a href="#">dinars</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">language</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <hr/>
                 <nav className="container">
                     <a className="logo" href="#"><img src="../../img/logo.png" alt="logo"/></a>
-                    <ul className="nav">
+                    <ul className="header_nav">
                         <li><a href="#">home</a></li>
                         <li><a href="#">catalog</a></li>
                         <li><a href="#">news</a></li>
@@ -28,7 +38,6 @@ class Header extends Component {
                         <li><a href="#">contact</a></li>
                     </ul>
                 </nav>
-                <hr/>
             </header>
 
         )
