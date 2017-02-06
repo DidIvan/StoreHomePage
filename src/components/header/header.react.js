@@ -22,8 +22,8 @@ class Header extends Component {
                                         <li><a href="#">grivnas</a></li>
                                         <li><a href="#">dinars</a></li>
                                     </ul>
-                                </li>
-                                <li><a href="#">language</a>
+                                </li><li>
+                                <a href="#">language</a>
                                     <ul>
                                         <li><a href="#">en</a></li>
                                         <li><a href="#">ua</a></li>
