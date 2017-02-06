@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import '../../css/components-style/header.css';
 import '../../css/components-style/style.css';
+import '../../css/fonts.css';
 
 class Header extends Component {
     render() {
@@ -14,7 +15,7 @@ class Header extends Component {
                             <li><a href="#">help</a></li>
                         </ul>
                         <div className="header_top_right">
-                            <ul className="currency">
+                            <ul>
                                 <li><a href="#">currency</a>
                                     <ul>
                                         <li><a href="#">dolars</a></li>
@@ -22,7 +23,13 @@ class Header extends Component {
                                         <li><a href="#">dinars</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#">language</a></li>
+                                <li><a href="#">language</a>
+                                    <ul>
+                                        <li><a href="#">en</a></li>
+                                        <li><a href="#">ua</a></li>
+                                        <li><a href="#">ru</a></li>
+                                    </ul>
+                                </li>
                             </ul>
                         </div>
                     </div>

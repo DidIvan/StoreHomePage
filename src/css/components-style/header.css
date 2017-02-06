@@ -79,39 +79,47 @@ ul.header_nav {
     border-bottom: none;
 }
 
-/*dropdown*/
+/*--------------------dropdown-----------------------*/
 .header_top_right {
     float: right;
 }
 
-ul.currency {
-    list-style: none;
+.header_top_right ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    min-width: 200px;
 }
-
-ul.currency li {
+.header_top_right ul li {
     display: inline-block;
 }
-
-ul.currency li:hover {
-    background-color: #cacaca;
+.header_top_right ul li:hover {
+    background-color: #333;
 }
-
-ul.currency li a {
+.header_top_right ul li a{
+    color: #999999;
     display: block;
+    padding: 17px 0 17px 0;
     text-decoration: none;
-    padding: 17px;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
 }
-
-ul.currency li a:hover {
-
-}
-
-ul.currency ul {
-    display: none;
-}
-
-ul.currency:hover ul {
+.header_top_right ul li:hover ul {
     display: block;
-    position: absolute;
 }
-
+.header_top_right ul ul {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    border: 5px solid #222;
+    border-top: 0;
+    margin-left: -5px;
+}
+.header_top_right ul ul li {
+    display: block;
+}
+.header_top_right ul ul li a:hover {
+    color: #699;
+}
