@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import '../../css/components-style/header.css';
 import '../../css/components-style/style.css';
 import '../../css/fonts.css';
+import arrow from '../../../public/img/content/arrow.png';
 
 class Header extends Component {
     render() {
@@ -16,16 +17,17 @@ class Header extends Component {
                         </ul>
                         <div className="header_top_right">
                             <ul>
-                                <li><a href="#">currency</a>
+                                <li className="header_currency"><a href="#">currency</a><img src={arrow}
+                                                                                             alt="arrow"/>
                                     <ul>
                                         <li><a href="#">dolars</a></li>
                                         <li><a href="#">grivnas</a></li>
                                         <li><a href="#">dinars</a></li>
                                     </ul>
-                                </li><li>
-                                <a href="#">language</a>
+                                </li>
+                                <li className="header_language">
+                                    <a href="#">en</a>
                                     <ul>
-                                        <li><a href="#">en</a></li>
                                         <li><a href="#">ua</a></li>
                                         <li><a href="#">ru</a></li>
                                     </ul>
