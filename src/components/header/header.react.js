@@ -2,7 +2,19 @@ import React, {Component} from 'react';
 import '../../css/components-style/header.css';
 import '../../css/components-style/style.css';
 import '../../css/fonts.css';
-import arrow from '../../../public/img/content/arrow.png';
+import Dropdown from '../../components/dropdown.react';
+/*import arrow from '../../../public/img/content/arrow.png';*/
+
+const colours = [{
+    name: "Red",
+    hex: "#F21B1B"
+}, {
+    name: "Blue",
+    hex: "#1B66F2"
+}, {
+    name: "Green",
+    hex: "#07BA16"
+}];
 
 class Header extends Component {
     render() {
@@ -16,7 +28,8 @@ class Header extends Component {
                             <li><a href="#">help</a></li>
                         </ul>
                         <div className="header_top_right">
-                            <ul>
+                            <Dropdown list={colours} selected={colours[0]}/>
+                            { /* <ul>
                                 <li className="header_currency"><a href="#">currency</a><img src={arrow}
                                                                                              alt="arrow"/>
                                     <ul>
@@ -32,7 +45,7 @@ class Header extends Component {
                                         <li><a href="#">ru</a></li>
                                     </ul>
                                 </li>
-                            </ul>
+                            </ul>*/}
                         </div>
                     </div>
                 </div>
