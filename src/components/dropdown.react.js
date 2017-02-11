@@ -7,14 +7,13 @@ class Dropdown extends Component {
         this.state = {
             listVisible: false,
             display: ""
-        }
-        this.show = this.show.bind(this)
-        this.hide = this.hide.bind(this)
+        };
+        this.show = this.show.bind(this);
+        this.hide = this.hide.bind(this);
     }
 
     select(item) {
-        debugger;
-        this.props.selected = item;
+        this.props.onSelected(item);
     }
 
     show() {
@@ -31,7 +30,7 @@ class Dropdown extends Component {
         var items = [];
         for (var i = 0; i < this.props.list.length; i++) {
             var item = this.props.list[i];
-            items.push(<div key={item.name} onClick={this.select.bind(null, item)}>
+            items.push(<div key={item.name} onClick={this.select.bind(this, item)}>
                 <span key={item} style={{ color: item.hex }}>{item.name}</span>
                 <i className="fa fa-check"></i>
             </div>);

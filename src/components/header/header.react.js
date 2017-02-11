@@ -17,6 +17,16 @@ const colours = [{
 }];
 
 class Header extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            selected:colours[0]
+        };
+        this.onSelected = this.onSelected.bind(this);
+    }
+    onSelected(item){
+     this.setState({selected: item})
+    }
     render() {
         return (
             <header id="header" className="horizont">
@@ -28,24 +38,7 @@ class Header extends Component {
                             <li><a href="#">help</a></li>
                         </ul>
                         <div className="header_top_right">
-                            <Dropdown list={colours} selected={colours[0]}/>
-                            { /* <ul>
-                                <li className="header_currency"><a href="#">currency</a><img src={arrow}
-                                                                                             alt="arrow"/>
-                                    <ul>
-                                        <li><a href="#">dolars</a></li>
-                                        <li><a href="#">grivnas</a></li>
-                                        <li><a href="#">dinars</a></li>
-                                    </ul>
-                                </li>
-                                <li className="header_language">
-                                    <a href="#">en</a>
-                                    <ul>
-                                        <li><a href="#">ua</a></li>
-                                        <li><a href="#">ru</a></li>
-                                    </ul>
-                                </li>
-                            </ul>*/}
+                            <Dropdown list={colours} selected={this.state.selected} onSelected={this.onSelected}/>
                         </div>
                     </div>
                 </div>
@@ -64,7 +57,6 @@ class Header extends Component {
 
         )
     }
-}
-;
+};
 
 export default Header;
