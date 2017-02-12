@@ -2,8 +2,12 @@ import React, {Component} from 'react';
 import '../../css/components-style/header.css';
 import '../../css/components-style/style.css';
 import '../../css/fonts.css';
+import DropDownMenu from 'material-ui/DropDownMenu';
+import MenuItem from 'material-ui/MenuItem';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+
 /*import Dropdown from '../../components/dropdown.react';*/
-import SelectField from '../../ReactComp/SelectField.react';
+/*import SelectField from '../../ReactComp/SelectField.react';*/
 
 const colours = [{
     name: "Red",
@@ -15,18 +19,26 @@ const colours = [{
     name: "Green",
     hex: "#07BA16"
 }];
-
+const styles = {
+    customWidth: {
+        width: 200,
+    },
+};
 class Header extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
         this.state = {
-            selected:colours[0]
+            valueCurrency: 1,
+            valueLanguage: 1
         };
-        this.onSelected = this.onSelected.bind(this);
     }
-    onSelected(item){
-     this.setState({selected: item})
-    }
+
+    handleChangeCurrency = (event, index, valueCurrency) => {
+        this.setState({valueCurrency});
+    };
+    handleChangeLanguage = (event, index, valueLanguage) => {
+        this.setState({valueLanguage});
+    };
     render() {
         return (
             <header id="header" className="horizont">
@@ -38,7 +50,22 @@ class Header extends Component {
                             <li><a href="#">help</a></li>
                         </ul>
                         <div className="header_top_right">
-                            <SelectField/>
+                            <MuiThemeProvider>
+                                <DropDownMenu value={this.state.valueCurrency} onChange={this.handleChangeCurrency}>
+                                    <MenuItem value={1} primaryText="EUR"/>
+                                    <MenuItem value={2} primaryText="USD"/>
+                                    <MenuItem value={3} primaryText="UAH"/>
+                                    <MenuItem value={4} primaryText="RUB"/>
+                                </DropDownMenu>
+                            </MuiThemeProvider>
+                            <MuiThemeProvider>
+                                <DropDownMenu value={this.state.valueLanguage} onChange={this.handleChangeLanguage}>
+                                    <MenuItem value={1} primaryText="EN"/>
+                                    <MenuItem value={2} primaryText="UA"/>
+                                    <MenuItem value={3} primaryText="RU"/>
+                                </DropDownMenu>
+                            </MuiThemeProvider>
+
                         </div>
                     </div>
                 </div>
@@ -57,6 +84,7 @@ class Header extends Component {
 
         )
     }
-};
+}
+;
 
 export default Header;

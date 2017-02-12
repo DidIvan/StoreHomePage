@@ -1,59 +1,32 @@
-import React, {Component} from 'react';
-import '../css/components-style/dropdown.css';
+import React from 'react';
+import DropDownMenu from 'material-ui/DropDownMenu';
+import MenuItem from 'material-ui/MenuItem';
 
-class Dropdown extends Component {
-    constructor(props){
+const styles = {
+    customWidth: {
+        width: 200,
+    },
+};
+
+export default class DropDownMenu extends React.Component {
+    constructor(props) {
         super(props);
-        this.state = {
-            listVisible: false,
-            display: ""
-        };
-        this.show = this.show.bind(this);
-        this.hide = this.hide.bind(this);
+        this.state = {value: 1};
     }
 
-    select(item) {
-        this.props.onSelected(item);
-    }
-
-    show() {
-        this.setState({listVisible: true});
-        document.addEventListener("click", this.hide);
-    }
-
-    hide() {
-        this.setState({listVisible: false});
-        document.removeEventListener("click", this.hide);
-    }
-
-    renderListItems() {
-        var items = [];
-        for (var i = 0; i < this.props.list.length; i++) {
-            var item = this.props.list[i];
-            items.push(<div key={item.name} onClick={this.select.bind(this, item)}>
-                <span key={item} style={{ color: item.hex }}>{item.name}</span>
-                <i className="fa fa-check"></i>
-            </div>);
-        }
-        return items;
-    }
+    handleChange = (event, index, value) => this.setState({value});
 
     render() {
         return (
-            <div className={"dropdown-container" + (this.state.listVisible ? " show" : "")}>
-                <div className={"dropdown-display" + (this.state.listVisible ? " clicked": "")} onClick={this.show}>
-                    <span style={{ color: this.props.selected.hex }}>{this.props.selected.name}</span>
-                    <i className="fa fa-angle-down"></i>
-                </div>
-                <div className="dropdown-list">
-                    <div>
-                        {this.renderListItems()}
-                    </div>
-                </div>
+            <div>
+                <DropDownMenu value={this.state.value} onChange={this.handleChange}>
+                    <MenuItem value={1} primaryText="Never" />
+                    <MenuItem value={2} primaryText="Every Night" />
+                    <MenuItem value={3} primaryText="Weeknights" />
+                    <MenuItem value={4} primaryText="Weekends" />
+                    <MenuItem value={5} primaryText="Weekly" />
+                </DropDownMenu>
             </div>
         );
     }
 }
-;
-
-export default Dropdown;
