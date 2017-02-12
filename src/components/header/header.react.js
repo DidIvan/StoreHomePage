@@ -2,8 +2,8 @@ import React, {Component} from 'react';
 import '../../css/components-style/header.css';
 import '../../css/components-style/style.css';
 import '../../css/fonts.css';
-import Dropdown from '../../components/dropdown.react';
-/*import arrow from '../../../public/img/content/arrow.png';*/
+/*import Dropdown from '../../components/dropdown.react';*/
+import SelectField from '../../ReactComp/SelectField.react';
 
 const colours = [{
     name: "Red",
@@ -38,7 +38,7 @@ class Header extends Component {
                             <li><a href="#">help</a></li>
                         </ul>
                         <div className="header_top_right">
-                            <Dropdown list={colours} selected={this.state.selected} onSelected={this.onSelected}/>
+                            <SelectField/>
                         </div>
                     </div>
                 </div>

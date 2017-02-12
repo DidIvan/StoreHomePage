@@ -8,7 +8,6 @@ import style from './Appstyles/Appstyles';*/
 import './css/components-style/style.css';
 import './css/fonts.css';
 
-
 class App extends Component {
     render() {
         return (
