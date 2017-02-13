@@ -10,7 +10,7 @@ footer{
 
 ul.footer_nav {
     list-style: none;
-    padding: 46px 0 0 200px;
+    padding: 46px 0 0 15%;
 }
 
 .footer_nav li {
@@ -18,7 +18,7 @@ ul.footer_nav {
 }
 
 .footer_nav > li > a {
-    padding-left: 55px;
+    padding-left: 30px;
     color: #414141;
     text-decoration: none;
     font-size: 12px;
@@ -33,5 +33,7 @@ ul.footer_nav {
 footer span{
     float: right;
     color: #c3c3c3;
+    font-size: 11px;
+    line-height: 2;
 }
 

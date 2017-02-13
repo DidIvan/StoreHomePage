@@ -67,9 +67,13 @@ ul.main_nav {
 .card_action a {
     text-decoration: none;
 }
-.card_action_name {
+.card_action p {
+    font-size: 1rem;
+}
+.card_action .card_action_name {
     margin: 28px 0 13px 0;
     color: #333333;
+    font-size: 0.75rem;/*12/16*/
 }
 .card_action_price {
     color: #c9c9c9;

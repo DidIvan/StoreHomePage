@@ -55,12 +55,14 @@ nav {
 
 ul.header_nav {
     list-style: none;
-    padding: 46px 0 0 200px;
+  /*  padding: 46px 0 0 200px;*/
+    padding: 46px 0 0 15%;
 }
 
 .header_nav li {
     float: left;
-    padding-left: 55px;
+/*    padding-left: 55px;*/
+    padding-left: 30px;
 }
 
 .header_nav > li > a {
