@@ -21,7 +21,13 @@ const colours = [{
 }];
 const styles = {
     borderStyle: {
-        border:"none"
+        border: "none"
+    },
+    labelStyle: {
+        top: -5
+    },
+    iconStyle: {
+        top: -2
     }
 };
 
@@ -40,6 +46,7 @@ class Header extends Component {
     handleChangeLanguage = (event, index, valueLanguage) => {
         this.setState({valueLanguage});
     };
+
     render() {
         return (
             <header id="header" className="horizont">
@@ -54,8 +61,10 @@ class Header extends Component {
                             <MuiThemeProvider>
                                 <DropDownMenu value={this.state.valueCurrency}
                                               onChange={this.handleChangeCurrency}
-                                              className = "currencyDropdown"
-                                              underlineStyle = {styles.borderStyle}
+                                              className="currencyDropdown"
+                                              underlineStyle={styles.borderStyle}
+                                              labelStyle={styles.labelStyle}
+                                              iconStyle={styles.iconStyle}
                                 >
                                     <MenuItem value={1} primaryText="EUR"/>
                                     <MenuItem value={2} primaryText="USD"/>
@@ -64,9 +73,11 @@ class Header extends Component {
                                 </DropDownMenu>
                             </MuiThemeProvider>
                             <MuiThemeProvider>
-                                <DropDownMenu value={this.state.valueLanguage} 
+                                <DropDownMenu value={this.state.valueLanguage}
                                               onChange={this.handleChangeLanguage}
-                                              underlineStyle = {styles.borderStyle}
+                                              underlineStyle={styles.borderStyle}
+                                              labelStyle={styles.labelStyle}
+                                              iconStyle={styles.iconStyle}
                                 >
                                     <MenuItem value={1} primaryText="EN"/>
                                     <MenuItem value={2} primaryText="UA"/>
