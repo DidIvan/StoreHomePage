@@ -90,62 +90,7 @@ ul.header_nav {
     float: right;
 }
 
-.header_top_right ul li {
-    display: inline-block;
-}
-
-.header_top_right ul li:hover {
-    background-color: #bdbdbd;
-}
-
-.header_top_right ul li img {
-    vertical-align: middle;
-    padding: 0 20px 0 13px;
-}
-
-.header_currency {
-    width: 140px;
-    border-right: 1px solid #ededed;
-}
-.header_currency a{
-    margin-left: 40px;
-}
-.header_currency ul{
-    width: 140px;
-}
-
-.header_language{
-    width: 50px;
-    text-align: center;
-}
-.header_language ul{
-    width: 50px;
-}
-
-.header_top_right ul li a {
-    color: #999999;
-    display: inline-block;
-    padding: 17px 0 12px 0;
-    text-decoration: none;
-    font-size: 11px;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-.header_top_right ul li:hover ul {
-    display: block;
-}
-
-.header_top_right ul ul {
-    display: none;
-    position: absolute;
-}
-
-.header_top_right ul ul li {
-    display: block;
-    border-bottom: 1px solid #736e6e;;
-}
-
-.header_top_right ul ul li a:hover {
-    color: #699;
+.currencyDropdown{
+    height: 43px!important;
+    line-height: 2;
 }

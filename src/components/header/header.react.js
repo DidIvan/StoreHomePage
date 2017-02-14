@@ -20,10 +20,11 @@ const colours = [{
     hex: "#07BA16"
 }];
 const styles = {
-    customWidth: {
-        width: 200,
-    },
+    borderStyle: {
+        border:"none"
+    }
 };
+
 class Header extends Component {
     constructor(props) {
         super(props);
@@ -51,7 +52,11 @@ class Header extends Component {
                         </ul>
                         <div className="header_top_right">
                             <MuiThemeProvider>
-                                <DropDownMenu value={this.state.valueCurrency} onChange={this.handleChangeCurrency}>
+                                <DropDownMenu value={this.state.valueCurrency}
+                                              onChange={this.handleChangeCurrency}
+                                              className = "currencyDropdown"
+                                              underlineStyle = {styles.borderStyle}
+                                >
                                     <MenuItem value={1} primaryText="EUR"/>
                                     <MenuItem value={2} primaryText="USD"/>
                                     <MenuItem value={3} primaryText="UAH"/>
@@ -59,7 +64,10 @@ class Header extends Component {
                                 </DropDownMenu>
                             </MuiThemeProvider>
                             <MuiThemeProvider>
-                                <DropDownMenu value={this.state.valueLanguage} onChange={this.handleChangeLanguage}>
+                                <DropDownMenu value={this.state.valueLanguage} 
+                                              onChange={this.handleChangeLanguage}
+                                              underlineStyle = {styles.borderStyle}
+                                >
                                     <MenuItem value={1} primaryText="EN"/>
                                     <MenuItem value={2} primaryText="UA"/>
                                     <MenuItem value={3} primaryText="RU"/>
