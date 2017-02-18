@@ -6,6 +6,7 @@ import DropDownMenu from 'material-ui/DropDownMenu';
 import MenuItem from 'material-ui/MenuItem';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Basket from './header_components/basket';
+import Search from './header_components/search';
 
 const styles = {
     borderStyle: {
@@ -88,6 +89,9 @@ class Header extends Component {
                     </ul>
                     <MuiThemeProvider>
                         <Basket/>
+                    </MuiThemeProvider> 
+                    <MuiThemeProvider>
+                        <Search/>
                     </MuiThemeProvider>
                 </nav>
             </header>

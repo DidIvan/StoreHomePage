@@ -42,6 +42,7 @@
 
 nav {
     height: 100px;
+    position: relative;
 }
 
 .logo {
@@ -55,13 +56,12 @@ nav {
 
 ul.header_nav {
     list-style: none;
-  /*  padding: 46px 0 0 200px;*/
     padding: 46px 0 0 15%;
+    display: inline-block;
 }
 
 .header_nav li {
     float: left;
-/*    padding-left: 55px;*/
     padding-left: 30px;
 }
 

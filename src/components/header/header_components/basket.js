@@ -2,12 +2,14 @@ import React, {Component} from 'react';
 import Badge from 'material-ui/Badge';
 import IconButton from 'material-ui/IconButton';
 import FontIcon from 'material-ui/FontIcon';
-import {blue500, red500, greenA200} from 'material-ui/styles/colors';
 
 const styles = {
     badgeStyle: {
         width: 90,
         height: 60,
+        position: "absolute",
+        bottom: 40,
+        right:120
     },
     iconStyle: {
         fontSize: 40
@@ -21,7 +23,6 @@ const styles = {
     }
 };
 const Basket = () => (
-    <div>
         <Badge
             badgeContent={10}
             secondary={true}
@@ -36,7 +37,6 @@ const Basket = () => (
                 <FontIcon className="material-icons">shopping_cart</FontIcon>
             </IconButton>
         </Badge>
-    </div>
 );
 
 export default Basket;
