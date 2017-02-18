@@ -5,20 +5,8 @@ import '../../css/fonts.css';
 import DropDownMenu from 'material-ui/DropDownMenu';
 import MenuItem from 'material-ui/MenuItem';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import Basket from './header_components/basket';
 
-/*import Dropdown from '../../components/dropdown.react';*/
-/*import SelectField from '../../ReactComp/SelectField.react';*/
-
-const colours = [{
-    name: "Red",
-    hex: "#F21B1B"
-}, {
-    name: "Blue",
-    hex: "#1B66F2"
-}, {
-    name: "Green",
-    hex: "#07BA16"
-}];
 const styles = {
     borderStyle: {
         border: "none"
@@ -98,6 +86,9 @@ class Header extends Component {
                         <li><a href="#">about</a></li>
                         <li><a href="#">contact</a></li>
                     </ul>
+                    <MuiThemeProvider>
+                        <Basket/>
+                    </MuiThemeProvider>
                 </nav>
             </header>
 

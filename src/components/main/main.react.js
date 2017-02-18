@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import Subscribe from './content/subscribe.react';
 import Goods from './content/goods.react';
 
 import '../../css/components-style/style.css';

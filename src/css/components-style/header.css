@@ -89,9 +89,8 @@ ul.header_nav {
 .header_top_right {
     float: right;
 }
-
+/*overrided styles from materiul-ui*/
 .currencyDropdown{
     height: 43px!important;
     border-right: 1px solid #ededed;
-   line-height: 2!important;
 }
