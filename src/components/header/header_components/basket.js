@@ -5,33 +5,20 @@ import FontIcon from 'material-ui/FontIcon';
 import {blue500, red500, greenA200} from 'material-ui/styles/colors';
 
 const styles = {
-    smallIcon: {
-        width: 36,
-        height: 36,
-    },
-    mediumIcon: {
-        width: 48,
-        height: 48,
-    },
-    largeIcon: {
-        width: 60,
+    badgeStyle: {
+        width: 90,
         height: 60,
     },
-    small: {
-        width: 72,
-        height: 72,
-        padding: 16,
+    iconStyle: {
+        fontSize: 40
     },
-    medium: {
-        width: 96,
-        height: 96,
-        padding: 24,
+    hoveredStyle: {
+        fontSize: 40
     },
-    large: {
-        width: 120,
-        height: 120,
-        padding: 30,
-    },
+    styleButton: {
+        width: 60,
+        height: 60
+    }
 };
 const Basket = () => (
     <div>
@@ -39,10 +26,12 @@ const Basket = () => (
             badgeContent={10}
             secondary={true}
             badgeStyle={{top: 12, right: 12}}
+            style={styles.badgeStyle}
         >
             <IconButton tooltip="Basket"
-                        iconStyle={styles.largeIcon}
-                        style={styles.large}
+                        iconStyle={styles.iconStyle}
+                        hoveredStyle={styles.hoveredStyle}
+                        style={styles.styleButton}
             >
                 <FontIcon className="material-icons">shopping_cart</FontIcon>
             </IconButton>
