@@ -1,23 +1,19 @@
-var React = require("react");
+import React, {Component} from "react"
 
 
-var InputField = React.createClass({
-    render: function () {
+class SubscribeForm extends Component {
+    render() {
         return (
-            <div>
-                <div className={this.props.className}>
-                    <input id={this.props.id} style={this.props.style}
-                           type={this.props.type} value={this.props.value}
-                           onChange={this.props.onChange} onBlur={this.props.onBlur}/>
-                    <label htmlFor={this.props.id} className="center-align"
-                           style={this.props.labelStyle}>{this.props.labelText}</label>
-                    <div className="row margin">
-                        <p className="errorMessage" style={this.props.errorStyle}>{this.props.errorMessage}</p>
-                    </div>
+            <form className="subscr-form" target="_blank">
+                <div className="form-group">
+                    <input type="text" className="form-control" id="subscr-name" placeholder="Enter name"
+                           required/>
+                    <button className="subscr-next"><i className="material-icons">input</i></button>
                 </div>
-            </div>
+            </form>
         )
     }
-});
+}
+;
 
-module.exports = InputField;
+export default SubscribeForm;

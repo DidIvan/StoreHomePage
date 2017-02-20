@@ -20,14 +20,18 @@ const styles = {
 };
 
 class Search extends Component {
-    constructor(props){
-        super(props)
-        this.displaySearch = this.displaySearch.bind(this)  
+    constructor(props) {
+        super(props);
+        this.displaySearch = this.displaySearch.bind(this)
     }
-    displaySearch = (event)=> {
+
+    displaySearch = ()=> {
         var search = document.getElementById("search");
-        var style = window.getComputedStyle(search,"");
-        search.style.display = (style.display == 'none')?'block':'none';
+        var style = window.getComputedStyle(search, "");
+        search.style.display = (style.display == 'none') ? 'block' : 'none';
+    };
+    handleSubmit = ()=> {
+    
     };
 
     render() {
