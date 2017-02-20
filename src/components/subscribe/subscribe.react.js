@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import '../../../css/components-style/subscribe.css';
+import '../../css/components-style/subscribe.css';
 
 class Subscribe extends Component {
     render() {

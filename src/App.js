@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from './components/header/header.react';
 import Main from './components/main/main.react';
-import Subscribe from './components/main/content/subscribe.react';
+import Subscribe from './components/subscribe/subscribe.react';
 import Footer from './components/footer/footer.react';
 /*import {css} from "aphrodite/no-important";
 import style from './Appstyles/Appstyles';*/
