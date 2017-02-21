@@ -24,6 +24,7 @@
     margin-top: 30px;
 }
 
+/*
 .subscribe_input {
     display: inline-block;
     width: 302px;
@@ -50,4 +51,43 @@
     float: right;
     margin: 18px 21px 0 0;
 }
+*/
 
+/*subscribe form - input for email*/
+.subscribe_form {
+    display: inline-block;
+    width: 302px;
+    height: 50px;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 23px;
+    margin-top: 33px;
+}
+
+.subscribe_email {
+    display: inline-block;
+    float: left;
+    margin: 10px 0 0 25px;
+    padding-left: 5px;
+    line-height: 2;
+    width: 200px;
+    border: none;
+    background: transparent;
+    color: #ffffff;
+    outline: none;
+}
+
+.subscribe_email::-webkit-input-placeholder {
+    color: #ffffff;
+}
+
+.subscribe_button {
+    display: inline-block;
+    float: right;
+    margin: 10px 30px 0 0;
+    border: none;
+    background: transparent;
+    outline: none;
+}
+.subscribe_button i {
+    color: #ffffff;
+}
