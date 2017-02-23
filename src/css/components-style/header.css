@@ -57,7 +57,6 @@ nav {
 ul.header_nav {
     list-style: none;
     padding: 46px 0 0 15%;
-    display: inline-block;
 }
 
 .header_nav li {
