@@ -50,7 +50,7 @@ var goodsDetail = {
 
 class GoodsDetail extends Component {
     render() {
-        var properties = goodsDetail.map((item)=> {
+        var properties = goodsDetail.propertyValues.map((item)=> {
                 return (
                     <li>{item.name} : {item.value} {item.measureCon}</li>
                 );
@@ -59,34 +59,31 @@ class GoodsDetail extends Component {
         return (
             <div className="goods-detail">
                 <div className="row">
-                    <div className="col s12">
-                        <div className="card-panel">
+                    <div className="card-panel">
+                        <div className="title-detail">
+                            <h5>{goodsDetail.title}</h5>
+                        </div>
 
-                            <div className="title-detail">
-                                <h5 className="truncate">{goodsDetail.title}</h5>
+                        <div className="row">
+                            <div className="card-image">
+                                <a href="#">
+                                    <img src={pictureConverter1(goodsDetail.picture)}/></a>
                             </div>
-
-                            <div className="row">
-                                <div className="card-image left">
-                                    <a href="#">
-                                        <img src={pictureConverter1(goodsDetail.picture)}/></a>
-                                </div>
-                                <div className="description">
-                                    {goodsDetail.description}
-                                </div>
+                            <div className="description">
+                                {goodsDetail.description}
                             </div>
-                            <div className="divider"></div>
-                            <div className="row">
-                                <div className="rating">
-                                </div>
-                                <a className="waves-effect waves-light btn green right">Заказать</a>
+                        </div>
+                        <div className="divider"></div>
+                        <div className="row">
+                            <div className="rating">
                             </div>
-                            <div className="divider"></div>
-                            <div className="row">
-                                <div className="detail-property left">
-                                    <h5>Характеристики</h5>
-                                    <ul>{properties}</ul>
-                                </div>
+                            <a className="waves-effect waves-light btn green right">Заказать</a>
+                        </div>
+                        <div className="divider"></div>
+                        <div className="row">
+                            <div className="detail-property left">
+                                <h5>Характеристики</h5>
+                                <ul>{properties}</ul>
                             </div>
                         </div>
                     </div>

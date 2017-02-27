@@ -1,6 +1,13 @@
 /*-----------------goods-detail begin-------------------------*/
+
+.divider {
+    height: 1px;
+    overflow: hidden;
+    background-color: #e0e0e0;
+}
+
 .goods-detail {
-    padding-top: 80px;
+    background: lightgrey;
 }
 
 .goods-detail .card-panel {
@@ -36,11 +43,12 @@
 .goods-detail .card-image {
     margin-right: 10px;
     display: inline-block;
+    float: left;
 }
 
 .goods-detail .description {
     width: 100%;
-  /*  width: calc(100% - 310px);*/
+    /*  width: calc(100% - 310px);*/
 }
 
 .goods-detail .rating {
@@ -49,21 +57,24 @@
     font-size: 2em;
     margin-right: 10px;
 }
+
 .goods-detail .rating .btn {
-    background: #a3c756!important;
+    background: #a3c756 !important;
 }
 
 .goods-detail .detail-property {
     width: 300px;
     display: inline-block;
 }
-.detail-property ul{
+
+.detail-property ul {
     text-transform: capitalize;
 }
-.detail-property li{
+
+.detail-property li {
     margin: 10px 0;
     font-size: 1.2em;
-    color:#7b7777;
+    color: #7b7777;
 }
 
 .goods-detail .detail-feedback {
