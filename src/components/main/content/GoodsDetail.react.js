@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import Button from '../../../matuicomp/button';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import '../../../css/components-style/goodsDetail.css';
 const DEFAULT_PICTURE1 = '../../../../public/img/default/no_photo.png';
 
@@ -73,13 +75,13 @@ class GoodsDetail extends Component {
                                 {goodsDetail.description}
                             </div>
                         </div>
-                        <div className="divider"></div>
-                        <div className="row">
+                        <div className="row buttons_row">
                             <div className="rating">
                             </div>
-                            <a className="waves-effect waves-light btn green right">Заказать</a>
+                            <MuiThemeProvider className="button_order">
+                                <Button className="button_order" label="Заказать"/>
+                            </MuiThemeProvider>
                         </div>
-                        <div className="divider"></div>
                         <div className="row">
                             <div className="detail-property left">
                                 <h5>Характеристики</h5>
