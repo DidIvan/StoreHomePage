@@ -4,6 +4,7 @@
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
     margin: 0 0 20px 0;
 }
+
 .card-panel {
     position: relative;
     box-sizing: border-box;
@@ -44,27 +45,39 @@
     width: 100%;
     /*  width: calc(100% - 310px);*/
 }
-.buttons_row{
+
+.buttons_row {
     height: 75px;
     overflow: hidden;
     border-top: 1px solid #e0e0e0;
     border-bottom: 1px solid #e0e0e0;
     padding: 0 20px;
 }
+
 .rating {
     display: inline-block;
     width: 300px;
     font-size: 2em;
     margin-right: 10px;
 }
-.button_order{
+
+.button_order {
     float: right;
     display: inline-block;
 }
 
-.goods-detail .detail-property {
+.detail-property {
     width: 300px;
     margin-left: 20px;
+}
+
+.detail-property h3 {
+    padding: 15px 0;
+    text-decoration: blink;
+}
+
+.detail-property h4 {
+    font-weight: normal;
 }
 
 .detail-property ul {
@@ -73,7 +86,7 @@
 }
 
 .detail-property li {
-    margin: 10px 0;
+    margin: 10px 0 20px 20px;
     font-size: 1.2em;
     color: #7b7777;
 }

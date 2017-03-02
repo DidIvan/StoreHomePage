@@ -13,7 +13,7 @@ var pictureConverter1 = function (picture) {
 
 var goodsDetail = {
     "id": '1',
-    "title": 'Pump',
+    "title": 'Shirts',
     "picture": 'img/default/no_photo.png',
     "description": 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores consectetur cum cumque' +
     ' deserunt enim exercitationem explicabo minima molestiae nam neque nisi perspiciatis praesentium,' +
@@ -30,22 +30,10 @@ var goodsDetail = {
     "propertyValues": [
         {
             "id": '1',
-            "name": "supply",
-            "value": 220,
-            "measureName": 'volts',
-            "measureCon": 'VAC'
-        }, {
-            "id": '2',
-            "name": "pressure",
-            "value": 10,
-            "measureName": 'bar',
-            "measureCon": 'bar'
-        }, {
-            "id": '3',
-            "name": "power",
-            "value": 0.06,
-            "measureName": 'Watt',
-            "measureCon": 'kW'
+            "concept": "Casual",
+            "composition": "Cotton 100%",
+            "color": "black",
+            "size": 'XS'
         }
     ]
 }
@@ -54,7 +42,17 @@ class GoodsDetail extends Component {
     render() {
         var properties = goodsDetail.propertyValues.map((item)=> {
                 return (
-                    <li>{item.name} : {item.value} {item.measureCon}</li>
+                    <div>
+                        <h4>CONCEPT</h4>
+                        <li>{item.concept}</li>
+                        <h4>COMPOSITION</h4>
+                        <li>{item.composition}</li>
+                        <h4>COLOR</h4>
+                        <li>{item.color}</li>
+                        <h4>SIZE</h4>
+                        <li>{item.size}</li>
+                    </div>
+
                 );
             }
         );
@@ -84,7 +82,7 @@ class GoodsDetail extends Component {
                         </div>
                         <div className="row">
                             <div className="detail-property left">
-                                <h3>Характеристики</h3>
+                                <h3>Details</h3>
                                 <ul>{properties}</ul>
                             </div>
                         </div>
