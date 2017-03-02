@@ -84,7 +84,7 @@ class GoodsDetail extends Component {
                         </div>
                         <div className="row">
                             <div className="detail-property left">
-                                <h5>Характеристики</h5>
+                                <h3>Характеристики</h3>
                                 <ul>{properties}</ul>
                             </div>
                         </div>
