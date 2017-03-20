@@ -12,7 +12,7 @@ import reducer from './reducers';
 import injectTapEventPlugin from "react-tap-event-plugin";
 injectTapEventPlugin();
 
-const store = createStore(reducer);
+let store = createStore(reducer);
 
 ReactDOM.render(
     <Provider store={store}>

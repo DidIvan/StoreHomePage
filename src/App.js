@@ -9,21 +9,31 @@ import './css/components-style/style.css';
 import './css/fonts.css';
 
 class App extends Component {
+    constructor(props){
+        super(props)
+        this.onSwitcher = this.onSwitcher.bind(this)
+    }
+
     render() {
+        let switcher = this.props.view.goodsDetail.viewType;
+        console.log(switcher);
         let goodsView = '';
-        switch (this.state.viewType) {
-            case 'true':
+        debugger;
+        switch (switcher) {
+            case true:
                 goodsView = <GoodsDetail/>;
                 break;
-            case 'false' :
+            case false :
                 goodsView = <Main/>;
                 break;
         }
         return (
             <div>
                 <Header/>
+                <input type="button" value="switcher" onClick={this.onSwitcher.bind(this)}/>
                 {goodsView}
                 <Subscribe/>
+                
                 <Footer/>
             </div>
         )
@@ -31,6 +41,13 @@ class App extends Component {
 }
 
 export default connect(
-    state=>({}),
-    dispatch=>({})
+    state=>({
+        view: state
+    }),
+    dispatch=>({
+        onSwitcher(){
+            debugger;
+            dispatch({type: 'GOODS_DETAIL_VIEW'})
+        }
+    })
 )(App);
