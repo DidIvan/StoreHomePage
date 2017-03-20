@@ -9,9 +9,10 @@ import './css/components-style/style.css';
 import './css/fonts.css';
 
 class App extends Component {
-    constructor(props){
-        super(props)
-        this.onSwitcher = this.onSwitcher.bind(this)
+    constructor(props) {
+        super(props);
+     
+        
     }
 
     render() {
@@ -30,10 +31,10 @@ class App extends Component {
         return (
             <div>
                 <Header/>
-                <input type="button" value="switcher" onClick={this.onSwitcher.bind(this)}/>
+                <input type="button" value="switcher" onClick={this.onSwitcher}/>
                 {goodsView}
                 <Subscribe/>
-                
+
                 <Footer/>
             </div>
         )
@@ -47,7 +48,7 @@ export default connect(
     dispatch=>({
         onSwitcher(){
             debugger;
-            dispatch({type: 'GOODS_DETAIL_VIEW'})
+            dispatch({type: 'GOODS_DETAIL_VIEW', payload: false})
         }
     })
 )(App);
