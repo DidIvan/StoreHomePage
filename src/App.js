@@ -31,6 +31,7 @@ class App extends Component {
         return (
             <div>
                 <Header/>
+                
                 <input type="button" value="switcher" onClick={this.onSwitcher}/>
                 {goodsView}
                 <Subscribe/>
