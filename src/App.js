@@ -21,8 +21,9 @@ class App extends Component {
         let goodsView = '';
         debugger;
         switch (switcher) {
+            
             case true:
-                goodsView = <GoodsDetail/>;
+                goodsView = <Main/>;
                 break;
             case false :
                 goodsView = <Main/>;
@@ -31,8 +32,7 @@ class App extends Component {
         return (
             <div>
                 <Header/>
-                
-                <input type="button" value="switcher" onClick={this.onSwitcher}/>
+                { /*<input type="button" value="switcher" onClick={this.onSwitcher}/>*/}
                 {goodsView}
                 <Subscribe/>
 
