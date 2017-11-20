@@ -31,7 +31,7 @@ var Main = React.createClass({
                         <Goods image="../../img/content/Base8.jpg" oldprice="$32" newprice="$12"
                                goodName="T-shirt with lower panel"/>
                     </div>
-                    <GoodsDetail/>
+                  {/*  <GoodsDetail/>*/}
                 </main>
             </div>
         )
